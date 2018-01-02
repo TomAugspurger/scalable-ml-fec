@@ -1,0 +1,30 @@
+worker:
+  replicas: 4
+  pipPackages: >-
+    git+https://github.com/dask/gcsfs.git
+  condaPackages: >-
+    -c conda-forge
+    zarr
+    blosc
+    matplotlib
+    seaborn
+    snappy
+    python-snappy
+
+jupyter:
+  pipPackages: >-
+    git+https://github.com/dask/gcsfs.git
+  condaPackages: >-
+    -c conda-forge
+    zarr
+    blosc
+    matplotlib
+    seaborn
+    snappy
+    python-snappy
+
+scheduler:
+    condaPackages: >-
+      -c conda-forge
+      snappy
+      python-snappy
