@@ -37,3 +37,6 @@ helm:
 
 dask:
 	helm install -f config.yaml dask/dask
+
+article-1-cluster.html: article-1-cluster.ipynb
+	jupyter nbconvert article-1-cluster.ipynb --TagRemovePreprocessor.remove_input_tags='{"remove_input"}' --TagRemovePreprocessor.remove_cell_tags='{"remove_cell"}'
