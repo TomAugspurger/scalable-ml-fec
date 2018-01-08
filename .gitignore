@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 
 data
+article-1*
+*.mp4
+*.png
