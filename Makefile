@@ -21,6 +21,9 @@ headers:
 	curl -o data/indiv_header.csv http://classic.fec.gov/finance/disclosure/metadata/indiv_header_file.csv
 	curl -o data/oppexp_header.csv http://classic.fec.gov/finance/disclosure/metadata/oppexp_header_file.csv
 
+parquet:
+	python fec/readers.py
+
 cluster:
 	gcloud container clusters create dask-demo \
 		--num-nodes=3 \
